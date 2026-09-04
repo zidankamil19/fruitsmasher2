@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+}
+
+body {
+  background: #0f0c20;
+  color: #fff;
+  margin: 0;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.game-title {
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin: 0 0 15px 0;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.highlight {
+  color: #ff3366;
+  text-shadow: 0 0 15px #ff3366;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff3366;
+  box-shadow: 0 0 8px rgba(255, 51, 102, 0.5);
+}
+
+.btn-play {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background: linear-gradient(45deg, #ff3366, #ff6b33);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 51, 102, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-play:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 51, 102, 0.6);
+}
+
+.hud {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+canvas {
+  background: #18152e;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+/* Animasi Getar (Shake) saat keno Bom */
+.shake {
+  animation: shakeAnim 0.3s ease-in-out;
+}
+
+@keyframes shakeAnim {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-8px, 5px); }
+  40% { transform: translate(8px, -5px); }
+  60% { transform: translate(-5px, 3px); }
+  80% { transform: translate(5px, -3px); }
+}
+
+#leaderboardTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#leaderboardTable th, 
+#leaderboardTable td {
+  padding: 10px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+#leaderboardTable th {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  color: #aaa;
+}
+
+#leaderboardTable td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#leaderboardTable tbody tr:first-child td {
+  color: #ffd700;
+  font-weight: bold;
+}
