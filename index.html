@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Ninja Arcade 2D</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <h1 class="game-title">FRUIT<span class="highlight">SLICER</span></h1>
+
+  <!-- Form Login Awal -->
+  <div id="loginMenu" class="card">
+    <h3>Masukkan Profil</h3>
+    <input type="text" id="username" placeholder="Username / Nickname" autocomplete="off" required>
+    <input type="tel" id="whatsapp" placeholder="Nomor WhatsApp" autocomplete="off" required>
+    <button class="btn-play" onclick="startGame()">MAIN SEKARANG 🎮</button>
+  </div>
+
+  <!-- Area Game -->
+  <div id="gameArea" style="display: none;">
+    <div class="hud">
+      <div id="scoreDisplay">SCORE: 0</div>
+    </div>
+    <canvas id="gameCanvas" width="340" height="460"></canvas>
+  </div>
+
+  <!-- Leaderboard -->
+  <div id="leaderboardArea" class="card">
+    <h3>🏆 Top Leaderboard</h3>
+    <table id="leaderboardTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Player</th>
+          <th>Skor</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        <tr>
+          <td colspan="3">Memuat data...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
